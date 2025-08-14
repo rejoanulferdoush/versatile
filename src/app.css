@@ -8,6 +8,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background-color: var(--color-primary-dark);
 }
 /* root styles */
 :root {
@@ -16,7 +17,7 @@
   --font-family-inter: "Inter", sans-serif;
   /* font size */
   --font-size-xxl: clamp(2rem, calc(4.875rem + 0.5vw), 4.875rem);
-  --font-size-xl: clamp(2rem, calc(3rem + 0.5vw), 3rem);
+  --font-size-xl: clamp(2rem, calc(2.8rem + 1vw), 3rem);
   --font-size-base: clamp(1rem, calc(1.75rem + 0.5vw), 1.75rem);
   --font-size-lg: clamp(1rem, calc(1.25rem + 0.5vw), 1.25rem);
   --font-size-sm: clamp(0.8rem, calc(1.125rem + 0.5vw), 1.125rem);
@@ -33,9 +34,8 @@
   --color-primary-light: rgba(255, 255, 255, 0.1);
   --color-warning: rgba(230, 83, 60, 1);
   /* padding */
-  --padding-xxl: 0 calc(clamp(9.375rem, 10rem, 12rem) + 1vw);
+
   /* margin */
-  --margin-top-base: 10vh;
 }
 /* common styles */
 .section__text--xxl {
@@ -71,40 +71,47 @@
   cursor: pointer;
 }
 .padding__xxl {
-  padding: var(--padding-xxl);
+  padding: 0 clamp(4rem, calc(8rem + 0.5vw), 9.375rem);
 }
 .margin__top--base {
-  margin-top: var(--margin-top-base);
+  margin-top: 10vh;
 }
 /* hero styles */
 .nav__container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  & ul {
+  & .nav__menu--big > ul {
     display: flex;
     align-items: center;
-    gap: 2.25rem;
-    border: 2px solid var(--color-primary-secondary);
-    padding: 1.25rem 0.2rem;
+    outline: 2px solid var(--color-primary-secondary);
+    padding: 1.25rem 0rem;
     border-radius: 50px;
-  }
-  & li {
-    list-style: none;
-    padding: 0.625rem;
-    & a {
-      padding: 1.25rem 2rem;
-      border-radius: 50px;
-      text-decoration: none;
-      font-family: var(--font-family-inter);
-      color: var(--color-primary-dark);
-      font-size: var(--font-size-lg);
-      font-weight: var(--font-weight-regular);
-      letter-spacing: 0.2vw;
-      &:hover {
-        transition: 0.5s ease;
+
+    & li {
+      border: none;
+      list-style: none;
+      padding: 0.625rem;
+
+      & a {
+        padding: 1.25rem 2rem;
+        border-radius: 50px;
+        text-decoration: none;
+        font-family: var(--font-family-inter);
         color: var(--color-primary-white);
-        background-color: var(--color-warning);
+        font-size: var(--font-size-lg);
+        font-weight: var(--font-weight-regular);
+        letter-spacing: 0.2vw;
+
+        &:hover {
+          transition: 0.5s ease;
+          color: var(--color-primary-white);
+          background-color: var(--color-warning);
+        }
+        
+        &:focus {
+          outline: none;
+        }
       }
     }
   }
