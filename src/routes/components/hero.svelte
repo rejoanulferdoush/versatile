@@ -1,3 +1,7 @@
+<script>
+  export let hero__desc;
+</script>
+
 <!-- header -->
 <header class="padding__xxl padding__top--base">
   <!-- nav -->
@@ -28,7 +32,7 @@
     <!-- banner left -->
     <div class="banner__left">
       <h1 class="section__text--xxl">Get body in <span class="special__text">shape</span> & stay healthy</h1>
-      <p class="primary__text margin__top--sm">A huge selection of health and fitness content, healthy recipes and transformation stories to help you get fit and stay fit!</p>
+      <p class="primary__text margin__top--sm hero__desc">{hero__desc}</p>
       <div class="cta__btn margin__top--sm">
         <a href="#"><button class="btn__primary"><h3 class="btn__text">Join Club Now!</h3></button></a>
         <a href="#"><button class="btn__secondary"><h3 class="btn__text">Download APP</h3></button></a>
@@ -37,7 +41,7 @@
     <!-- banner right -->
      <div class="banner__right">
       <div class="banner__image">
-        <img src="/img/Images2.png" alt="" srcset="">
+        <img src="/img/instructor.png" alt="" srcset="">
       </div>
       <div class="tutorial">
         <a class="left__tutorial" href="#"><i class="fa-solid fa-play"></i></a>
