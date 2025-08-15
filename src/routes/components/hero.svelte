@@ -26,9 +26,13 @@
   <!-- banner -->
   <div class="banner__container">
     <!-- banner left -->
-    <div class="left">
+    <div class="banner__left">
       <h1 class="section__text--xxl">Get body in <span class="special__text">shape</span> & stay healthy</h1>
       <p class="primary__text margin__top--sm">A huge selection of health and fitness content, healthy recipes and transformation stories to help you get fit and stay fit!</p>
+      <div class="cta__btn margin__top--sm">
+        <a href="#"><button class="btn__primary"><h3 class="btn__text">Join Club Now!</h3></button></a>
+        <a href="#"><button class="btn__secondary"><h3 class="btn__text">Download APP</h3></button></a>
+      </div>
     </div>
     <!-- banner right -->
      <div class="banner__right">

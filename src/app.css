@@ -59,10 +59,20 @@ main {
   color: var(--color-primary-secondary);
 }
 .btn__primary {
+  color: var(--color-primary-white);
   border: none;
   border-radius: 42px;
   background: var(--color-warning);
   padding: 16px 40px 16px 40px;
+  cursor: pointer;
+}
+.btn__secondary {
+  color: var(--color-primary-white);
+  border: 2px solid var(--color-primary-white);
+  border-radius: 42px;
+  background: transparent;
+  padding: 16px 40px 16px 40px;
+  cursor: pointer;
 }
 .logo {
   background: transparent;
@@ -168,6 +178,15 @@ header::before {
   align-items: center;
   gap: 2.5rem;
 
+  & .banner__left {
+    & .cta__btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+    }
+  }
+
   & .banner__right {
     position: relative;
     & .banner__image > img {
@@ -211,7 +230,7 @@ header::before {
       }
     }
 
-    & .workout{
+    & .workout {
       position: absolute;
       top: 200px;
       left: 200px;
