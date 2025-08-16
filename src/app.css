@@ -9,7 +9,7 @@
   padding: 0;
   box-sizing: border-box;
 }
-section {
+body {
   background-color: var(--color-primary-dark);
 }
 /* root styles */
@@ -81,7 +81,7 @@ section {
   padding: 16px 40px 16px 40px;
   cursor: pointer;
 
-  &:hover{
+  &:hover {
     transition: 0.5s ease;
     border: 2px solid var(--color-warning);
     background: var(--color-warning);
@@ -254,6 +254,92 @@ header::before {
       padding: 20px;
       border: 1px solid rgba(255, 255, 255, 0.1);
       border-radius: 12px;
+    }
+  }
+}
+/* habits section styles */
+.habits__container {
+  & .habits__header {
+    text-align: center;
+  }
+  & .habits__card--container {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(200px, auto));
+    grid-gap: 20px;
+    justify-content: center;
+    align-items: center;
+
+    & .movement {
+      text-align: center;
+      & .movement__img > img {
+        border-radius: 100px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      & .movement__content {
+        & h4 {
+          line-height: 3rem;
+          font-size: var(--font-size-lg);
+          color: var(--color-primary-white);
+          font-family: var(--font-family-inter);
+        }
+      }
+    }
+    & .time {
+      text-align: center;
+      & .time__img > img {
+        border-radius: 100px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      & .time__content {
+        & h4 {
+          line-height: 3rem;
+          font-size: var(--font-size-lg);
+          color: var(--color-primary-white);
+          font-family: var(--font-family-inter);
+        }
+      }
+    }
+    & .practice {
+      text-align: center;
+      & .practice__img > img {
+        border-radius: 100px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      & .practice__content {
+        & h4 {
+          line-height: 3rem;
+          font-size: var(--font-size-lg);
+          color: var(--color-primary-white);
+          font-family: var(--font-family-inter);
+        }
+      }
+    }
+    & .weight {
+      text-align: center;
+      & .weight__img > img {
+        border-radius: 100px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      & .weight__content {
+        & h4 {
+          line-height: 3rem;
+          font-size: var(--font-size-lg);
+          color: var(--color-primary-white);
+          font-family: var(--font-family-inter);
+        }
+      }
     }
   }
 }
