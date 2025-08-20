@@ -159,7 +159,19 @@
   flex-direction: column-reverse;
   background: transparent;
 }
-  
+/* training exercise media*/
+  .training__image--container{
+    & .image__box1,
+  .image__box2,
+  .image__box3,
+  .image__box4,
+  .image__box5,
+  .image__box6 {
+    & .overlay__text{
+      display: none;
+    }
+  }
+  }
 }
 
 @media screen and (min-width: 0px) and (max-width: 600px) {
