@@ -5,6 +5,9 @@
   .padding__top--base {
     padding-top: 3.125rem;
   }
+  .margin__top--xxl {
+    margin-top: 10vh;
+  }
   .nav__menu--big {
     display: none;
   }
@@ -62,13 +65,13 @@
     flex-direction: column;
 
     & .banner__left {
-    & .cta__btn {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 20px;
+      & .cta__btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+      }
     }
-  }
 
     & .banner__right {
       position: relative;
@@ -142,35 +145,68 @@
     }
   }
   /* habits media */
-  .habits__container{
-    & .habits__card--container{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1.25rem;
-    flex-wrap: wrap;
-  }
-  }
-  /* run extra media */
-.run__content--container {
-  padding: 0px;
-  text-align: center;
-  gap: 40px;
-  flex-direction: column-reverse;
-  background: transparent;
-}
-/* training exercise media*/
-  .training__image--container{
-    & .image__box1,
-  .image__box2,
-  .image__box3,
-  .image__box4,
-  .image__box5,
-  .image__box6 {
-    & .overlay__text{
-      display: none;
+  .habits__container {
+    & .habits__card--container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.25rem;
+      flex-wrap: wrap;
     }
   }
+  /* run extra media */
+  .run__content--container {
+    padding: 0px;
+    text-align: center;
+    gap: 40px;
+    flex-direction: column-reverse;
+    background: transparent;
+  }
+  /* training exercise media*/
+  .training__image--container {
+    & .image__box1,
+    .image__box2,
+    .image__box3,
+    .image__box4,
+    .image__box5,
+    .image__box6 {
+      & .overlay__text {
+        display: none;
+      }
+    }
+  }
+  /* BMI Calculator media */
+  .bmi__container {
+    padding: 2rem clamp(1rem, calc(1rem + 2vw), 9.375rem);
+    & .bmi__counting--container {
+      flex-direction: column;
+      gap: 5vh;
+      & .left__chart {
+        text-align: center;
+        & table {
+          width: 80vw;
+        }
+      }
+      & .right__calculator {
+        text-align: center;
+        & .calculator__field {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          & input[type="text"] {
+            width: 100%;
+          }
+          & #gender {
+            width: 100%;
+          }
+          & #activity {
+            width: 100%;
+            grid-column: span 2;
+          }
+        }
+      }
+    }
   }
 }
 
@@ -181,12 +217,10 @@
     text-align: center;
     flex-direction: column;
 
-    & .banner__left{
-      
-      & .cta__btn{
+    & .banner__left {
+      & .cta__btn {
         flex-direction: column;
       }
-
     }
 
     & .banner__right {

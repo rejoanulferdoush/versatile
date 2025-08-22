@@ -8,6 +8,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 body {
   background-color: var(--color-primary-dark);
@@ -65,6 +66,9 @@ body {
   background: var(--color-warning);
   padding: 16px 40px 16px 40px;
   cursor: pointer;
+  font-family: var(--font-family-inter);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-sm);
 
   &:hover {
     transition: 0.5s ease;
@@ -548,6 +552,91 @@ header::before {
       width: 100%;
       height: 100%;
       background: rgba(9, 17, 255, 0.263);
+    }
+  }
+}
+/* BMI Calculator styles */
+.bmi__container {
+  padding: 5rem clamp(4rem, calc(8rem + 0.5vw), 9.375rem);
+  background-color: var(--color-primary-light);
+  & .bmi__heading {
+    text-align: center;
+  }
+  & .bmi__counting--container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15vw;
+    & .left__chart {
+      & table {
+        width: 30vw;
+        border-collapse: collapse;
+        padding: 10px;
+        text-align: left;
+        color: var(--color-primary-white);
+        font-family: var(--font-family-inter);
+        border: 1px solid var(--color-primary-light);
+
+        & tr {
+          th,
+          td {
+            border: 1px solid var(--color-primary-light);
+            padding: 15px;
+          }
+          & td {
+            font-weight: var(--font-weight-regular);
+            color: var(--color-primary-secondary);
+          }
+        }
+      }
+    }
+    & .right__calculator {
+      & .calculator__field {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        justify-items: flex-start;
+        align-items: center;
+        overflow-x: hidden;
+        flex-wrap: wrap;
+        gap: 20px;
+        & input[type="text"] {
+          width: 100%;
+          padding: 12px 20px 12px 20px;
+          border-radius: 8px;
+          outline: none;
+          border: none;
+          font-family: var(--font-family-inter);
+          color: var(--color-primary-white);
+          background: var(--color-primary-light);
+        }
+        & #gender,
+        #activity {
+          padding: 12px 20px 12px 20px;
+          border-radius: 8px;
+          outline: none;
+          border: none;
+          appearance: none;
+          font-family: var(--font-family-inter);
+          color: var(--color-primary-secondary);
+          background: var(--color-primary-light);
+          background-image: url("data:image/svg+xml;utf8,<svg fill='%23ffffff' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+          background-repeat: no-repeat;
+          background-position: right 10px center;
+          background-size: 16px;
+        }
+        & #gender {
+          width: 100%;
+        }
+        & #activity {
+          width: 100%;
+          grid-column: span 2;
+        }
+        & #gender > option,
+        #activity > option {
+          color: var(--color-primary-white);
+          background: #2d2d2d;
+        }
+      }
     }
   }
 }
