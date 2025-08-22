@@ -208,9 +208,20 @@
       }
     }
   }
+  /* team media */
+  .our__team--container {
+    & .team__gallery--container {
+      grid-template-columns: repeat(2, 1fr);
+      & .team {
+        &.team > img {
+          object-fit: cover;
+        }
+      }
+    }
+  }
 }
 
-@media screen and (min-width: 0px) and (max-width: 600px) {
+@media screen and (min-width: 0px) and (max-width: 640px) {
   /* banner media */
   .banner__container {
     margin-top: 5vh;
@@ -290,6 +301,16 @@
         }
         & p {
           font-size: var(--font-size-xsm);
+        }
+      }
+    }
+  }
+  /* team media */
+  .our__team--container {
+    & .team__gallery--container {
+      grid-template-columns: repeat(1, 1fr);
+      & .team {
+        &.team > img {
         }
       }
     }

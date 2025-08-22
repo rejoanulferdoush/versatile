@@ -593,7 +593,7 @@ header::before {
     & .right__calculator {
       & .calculator__field {
         display: grid;
-        grid-template-columns: repeat(2,1fr);
+        grid-template-columns: repeat(2, 1fr);
         justify-items: flex-start;
         align-items: center;
         overflow-x: hidden;
@@ -636,6 +636,53 @@ header::before {
           color: var(--color-primary-white);
           background: #2d2d2d;
         }
+      }
+    }
+  }
+}
+/* our team styles */
+.our__team--container {
+  & .team__head {
+    text-align: center;
+  }
+  & .team__gallery--container {
+    width: 100%;
+    padding: 1.3rem;
+    border-radius: 1.2rem;
+    display: grid;
+    grid-gap: 1.25rem;
+    grid-template-columns: repeat(3, 1fr);
+    background: var(--color-primary-light);
+    & .team {
+      position: relative;
+      width: 100%;
+      &.team > img {
+        width: 100%;
+        height: 400px;
+        border-radius: 0.5rem;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: block;
+      }
+      &.team::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: 100;
+        border-radius: 0.5rem;
+        background: linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 0) 0%,
+          rgba(0, 0, 0, 0.501) 100%
+        );
+      }
+
+      & .team__overlay {
+        position: absolute;
+        top: 80%;
+        left: 3%;
+        z-index: 200;
+        transform: translate(2%, 5%);
       }
     }
   }
